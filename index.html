@@ -3,230 +3,291 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vedant | Portfolio</title>
+
+<title>Vedant | Quantum Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
+body{
+background: linear-gradient(-45deg,#0d1117,#161b22,#1f2937,#0d1117);
+background-size:400% 400%;
+animation: gradientBG 12s ease infinite;
+color:white;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
 /* Navbar */
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #161b22;
-    position: sticky;
-    top: 0;
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(22,27,34,0.7);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
 }
 
-nav h2 {
-    color: #58a6ff;
+nav h2{
+color:#58a6ff;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#58a6ff;
 }
 
 /* Hero */
 
-.hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    animation: fadeIn 1.5s ease;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:fadeIn 1.5s ease;
 }
 
-.hero h1 {
-    font-size: 50px;
-    color: #58a6ff;
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,#58a6ff,#00ffa6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #8b949e;
+.hero p{
+margin-top:10px;
+font-size:20px;
+color:#c9d1d9;
 }
 
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background: #238636;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+.hero button{
+margin-top:25px;
+padding:12px 30px;
+background:#238636;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
 }
 
-button:hover {
-    background: #2ea043;
+.hero button:hover{
+transform:scale(1.1);
+background:#2ea043;
 }
 
 /* Sections */
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
+.section{
+padding:100px 20px;
+text-align:center;
 }
 
-.section h2 {
-    color: #58a6ff;
-    margin-bottom: 20px;
+.section h2{
+font-size:32px;
+margin-bottom:30px;
+color:#58a6ff;
 }
 
-/* Cards */
+/* Glass cards */
 
-.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.card {
-    background: #161b22;
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+margin:15px;
+padding:25px;
+width:260px;
+border-radius:15px;
+transition:0.4s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+border-color:#58a6ff;
 }
 
 /* Skills */
 
-.skills span {
-    display: inline-block;
-    background: #21262d;
-    margin: 8px;
-    padding: 10px 15px;
-    border-radius: 8px;
+.skills span{
+display:inline-block;
+padding:10px 18px;
+margin:8px;
+background:rgba(88,166,255,0.1);
+border-radius:20px;
+transition:0.3s;
+}
+
+.skills span:hover{
+background:#58a6ff;
+}
+
+/* Contact */
+
+.contact a{
+color:#58a6ff;
+text-decoration:none;
 }
 
 /* Footer */
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #161b22;
+footer{
+padding:30px;
+background:rgba(22,27,34,0.8);
 }
 
-/* Animation */
+/* Animations */
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
-    <h2>Vedant</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </div>
+<h2>Vedant</h2>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <section class="hero">
-    <h1>Hello, I'm Vedant</h1>
-    <p>Quantum Computing & Data Science Enthusiast</p>
-    <button onclick="scrollToProjects()">View My Work</button>
+
+<h1>Hello, I'm Vedant</h1>
+
+<p>Quantum Computing • Data Science • Software Development</p>
+
+<button onclick="scrollToSection('projects')">View Projects</button>
+
 </section>
 
 <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a developer focused on Quantum Computing, Data Science,
-        and Software Development. I enjoy building real-world projects
-        and exploring advanced technologies.
-    </p>
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate developer focused on Quantum Computing, Data Science,
+and building advanced software systems. I enjoy solving complex problems
+and creating innovative solutions.
+</p>
+
 </section>
 
 <section id="projects" class="section">
-    <h2>Projects</h2>
 
-    <div class="cards">
+<h2>Projects</h2>
 
-        <div class="card">
-            <h3>Quantum Oracle Generator</h3>
-            <p>Built using Python and Cirq</p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>Deutsch Algorithm</h3>
-            <p>Quantum algorithm implementation</p>
-        </div>
+<div class="card">
+<h3>Quantum Oracle Generator</h3>
+<p>Python + Cirq quantum oracle generator.</p>
+</div>
 
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Built using GitHub Pages</p>
-        </div>
+<div class="card">
+<h3>Deutsch Algorithm</h3>
+<p>Quantum algorithm implementation and simulation.</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Modern portfolio using GitHub Pages.</p>
+</div>
+
+<div class="card">
+<h3>Data Science Projects</h3>
+<p>Machine learning and data analysis projects.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="skills" class="section">
-    <h2>Skills</h2>
 
-    <div class="skills">
-        <span>Python</span>
-        <span>Quantum Computing</span>
-        <span>Data Science</span>
-        <span>Git</span>
-        <span>HTML</span>
-        <span>Cirq</span>
-    </div>
+<h2>Skills</h2>
+
+<div class="skills">
+
+<span>Python</span>
+<span>Quantum Computing</span>
+<span>Cirq</span>
+<span>Data Science</span>
+<span>Machine Learning</span>
+<span>Git</span>
+<span>HTML</span>
+<span>JavaScript</span>
+
+</div>
 
 </section>
 
-<section id="contact" class="section">
-    <h2>Contact</h2>
+<section id="contact" class="section contact">
 
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: Vedant2407-data</p>
+<h2>Contact</h2>
+
+<p>Email: your-email@example.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/Vedant2407-data" target="_blank">
+Vedant2407-data
+</a>
+</p>
 
 </section>
 
 <footer>
-    © 2026 Vedant Portfolio
+
+<p>© 2026 Vedant | Quantum Developer</p>
+
 </footer>
 
 <script>
 
-function scrollToProjects() {
-    document.getElementById("projects").scrollIntoView({
-        behavior: "smooth"
-    });
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({
+behavior:"smooth"
+});
 }
 
 </script>
